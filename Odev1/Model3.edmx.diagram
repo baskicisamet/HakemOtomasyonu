@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4fe47375eaf44769a7cb8e50f0d3f89d" Name="Diagram1">
+        <EntityTypeShape EntityType="tasarimodev1Model.hakem" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tasarimodev1Model.lig" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tasarimodev1Model.log" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tasarimodev1Model.sporcu" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="tasarimodev1Model.sporsalonu" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <AssociationConnector Association="tasarimodev1Model.FK_sporcu_1" ManuallyRouted="false" />
+        <AssociationConnector Association="tasarimodev1Model.FK_sporSalonu_1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

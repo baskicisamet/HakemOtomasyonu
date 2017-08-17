@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="tasarimodev1Model.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="hakem">
+          <Key>
+            <PropertyRef Name="hakem_id" />
+          </Key>
+          <Property Name="hakem_id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hakem_adi" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="hakem_soyadi" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="hakem_turu" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="hakem_classman" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="hakem_bolge" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="lig">
+          <Key>
+            <PropertyRef Name="l_id" />
+          </Key>
+          <Property Name="l_id" Type="uint" Nullable="false" />
+          <Property Name="l_adi" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="log">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ilgili" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="islem" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="tarih" Type="datetime" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sporcu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="adi" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="soyadi" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="l_id" Type="uint" Nullable="false" />
+          <Property Name="ozellik" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sporsalonu">
+          <Key>
+            <PropertyRef Name="s_id" />
+          </Key>
+          <Property Name="s_id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="s_adi" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="s_sehir" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="l_id" Type="uint" Nullable="false" />
+          <Property Name="ozellik" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_sporcu_1">
+          <End Role="lig" Type="Self.lig" Multiplicity="1" />
+          <End Role="sporcu" Type="Self.sporcu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lig">
+              <PropertyRef Name="l_id" />
+            </Principal>
+            <Dependent Role="sporcu">
+              <PropertyRef Name="l_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_sporSalonu_1">
+          <End Role="lig" Type="Self.lig" Multiplicity="1" />
+          <End Role="sporsalonu" Type="Self.sporsalonu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lig">
+              <PropertyRef Name="l_id" />
+            </Principal>
+            <Dependent Role="sporsalonu">
+              <PropertyRef Name="l_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="tasarimodev1ModelStoreContainer">
+          <EntitySet Name="hakem" EntityType="Self.hakem" Schema="tasarimodev1" store:Type="Tables" />
+          <EntitySet Name="lig" EntityType="Self.lig" Schema="tasarimodev1" store:Type="Tables" />
+          <EntitySet Name="log" EntityType="Self.log" Schema="tasarimodev1" store:Type="Tables" />
+          <EntitySet Name="sporcu" EntityType="Self.sporcu" Schema="tasarimodev1" store:Type="Tables" />
+          <EntitySet Name="sporsalonu" EntityType="Self.sporsalonu" Schema="tasarimodev1" store:Type="Tables" />
+          <AssociationSet Name="FK_sporcu_1" Association="Self.FK_sporcu_1">
+            <End Role="lig" EntitySet="lig" />
+            <End Role="sporcu" EntitySet="sporcu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_sporSalonu_1" Association="Self.FK_sporSalonu_1">
+            <End Role="lig" EntitySet="lig" />
+            <End Role="sporsalonu" EntitySet="sporsalonu" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="tasarimodev1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="hakem">
+          <Key>
+            <PropertyRef Name="hakem_id" />
+          </Key>
+          <Property Name="hakem_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hakem_adi" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hakem_soyadi" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hakem_turu" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hakem_classman" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hakem_bolge" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="lig">
+          <Key>
+            <PropertyRef Name="l_id" />
+          </Key>
+          <Property Name="l_id" Type="Int64" Nullable="false" />
+          <Property Name="l_adi" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="sporcu" Relationship="Self.FK_sporcu_1" FromRole="lig" ToRole="sporcu" />
+          <NavigationProperty Name="sporsalonu" Relationship="Self.FK_sporSalonu_1" FromRole="lig" ToRole="sporsalonu" />
+        </EntityType>
+        <EntityType Name="log">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ilgili" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="islem" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tarih" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sporcu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="adi" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="soyadi" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="l_id" Type="Int64" Nullable="false" />
+          <Property Name="ozellik" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="lig" Relationship="Self.FK_sporcu_1" FromRole="sporcu" ToRole="lig" />
+        </EntityType>
+        <EntityType Name="sporsalonu">
+          <Key>
+            <PropertyRef Name="s_id" />
+          </Key>
+          <Property Name="s_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="s_adi" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="s_sehir" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="l_id" Type="Int64" Nullable="false" />
+          <Property Name="ozellik" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="lig" Relationship="Self.FK_sporSalonu_1" FromRole="sporsalonu" ToRole="lig" />
+        </EntityType>
+        <Association Name="FK_sporcu_1">
+          <End Role="lig" Type="Self.lig" Multiplicity="1" />
+          <End Role="sporcu" Type="Self.sporcu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lig">
+              <PropertyRef Name="l_id" />
+            </Principal>
+            <Dependent Role="sporcu">
+              <PropertyRef Name="l_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_sporSalonu_1">
+          <End Role="lig" Type="Self.lig" Multiplicity="1" />
+          <End Role="sporsalonu" Type="Self.sporsalonu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lig">
+              <PropertyRef Name="l_id" />
+            </Principal>
+            <Dependent Role="sporsalonu">
+              <PropertyRef Name="l_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="sporEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="hakem" EntityType="Self.hakem" />
+          <EntitySet Name="lig" EntityType="Self.lig" />
+          <EntitySet Name="log" EntityType="Self.log" />
+          <EntitySet Name="sporcu" EntityType="Self.sporcu" />
+          <EntitySet Name="sporsalonu" EntityType="Self.sporsalonu" />
+          <AssociationSet Name="FK_sporcu_1" Association="Self.FK_sporcu_1">
+            <End Role="lig" EntitySet="lig" />
+            <End Role="sporcu" EntitySet="sporcu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_sporSalonu_1" Association="Self.FK_sporSalonu_1">
+            <End Role="lig" EntitySet="lig" />
+            <End Role="sporsalonu" EntitySet="sporsalonu" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="tasarimodev1ModelStoreContainer" CdmEntityContainer="sporEntities">
+          <EntitySetMapping Name="hakem">
+            <EntityTypeMapping TypeName="tasarimodev1Model.hakem">
+              <MappingFragment StoreEntitySet="hakem">
+                <ScalarProperty Name="hakem_id" ColumnName="hakem_id" />
+                <ScalarProperty Name="hakem_adi" ColumnName="hakem_adi" />
+                <ScalarProperty Name="hakem_soyadi" ColumnName="hakem_soyadi" />
+                <ScalarProperty Name="hakem_turu" ColumnName="hakem_turu" />
+                <ScalarProperty Name="hakem_classman" ColumnName="hakem_classman" />
+                <ScalarProperty Name="hakem_bolge" ColumnName="hakem_bolge" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lig">
+            <EntityTypeMapping TypeName="tasarimodev1Model.lig">
+              <MappingFragment StoreEntitySet="lig">
+                <ScalarProperty Name="l_id" ColumnName="l_id" />
+                <ScalarProperty Name="l_adi" ColumnName="l_adi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="log">
+            <EntityTypeMapping TypeName="tasarimodev1Model.log">
+              <MappingFragment StoreEntitySet="log">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ilgili" ColumnName="ilgili" />
+                <ScalarProperty Name="islem" ColumnName="islem" />
+                <ScalarProperty Name="tarih" ColumnName="tarih" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sporcu">
+            <EntityTypeMapping TypeName="tasarimodev1Model.sporcu">
+              <MappingFragment StoreEntitySet="sporcu">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="adi" ColumnName="adi" />
+                <ScalarProperty Name="soyadi" ColumnName="soyadi" />
+                <ScalarProperty Name="l_id" ColumnName="l_id" />
+                <ScalarProperty Name="ozellik" ColumnName="ozellik" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sporsalonu">
+            <EntityTypeMapping TypeName="tasarimodev1Model.sporsalonu">
+              <MappingFragment StoreEntitySet="sporsalonu">
+                <ScalarProperty Name="s_id" ColumnName="s_id" />
+                <ScalarProperty Name="s_adi" ColumnName="s_adi" />
+                <ScalarProperty Name="s_sehir" ColumnName="s_sehir" />
+                <ScalarProperty Name="l_id" ColumnName="l_id" />
+                <ScalarProperty Name="ozellik" ColumnName="ozellik" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

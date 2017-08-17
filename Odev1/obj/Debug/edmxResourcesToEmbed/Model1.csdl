@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tasarimodev1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="hakem">
+    <Key>
+      <PropertyRef Name="hakem_id" />
+    </Key>
+    <Property Name="hakem_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="hakem_adi" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="hakem_soyadi" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="hakem_turu" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="hakem_classman" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="hakem_bolge" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lig">
+    <Key>
+      <PropertyRef Name="l_id" />
+    </Key>
+    <Property Name="l_id" Type="Int64" Nullable="false" />
+    <Property Name="l_adi" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="sporcu" Relationship="Self.FK_sporcu_1" FromRole="lig" ToRole="sporcu" />
+    <NavigationProperty Name="sporsalonu" Relationship="Self.FK_sporSalonu_1" FromRole="lig" ToRole="sporsalonu" />
+    <NavigationProperty Name="takim" Relationship="Self.FK_takim_1" FromRole="lig" ToRole="takim" />
+  </EntityType>
+  <EntityType Name="log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tur" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="islem" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tarih" Type="DateTime" Nullable="false" />
+    <Property Name="isim" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="musabaka">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ev_sahibi" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="misafir" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="salon" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="hafta" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lig" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="bas_hakem" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="yardimci_hakem" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="yazi_hakemi" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cizgi_hakem1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cizgi_hakem2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sporcu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adi" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="soyadi" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="l_id" Type="Int64" Nullable="false" />
+    <Property Name="ozellik" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="lig" Relationship="Self.FK_sporcu_1" FromRole="sporcu" ToRole="lig" />
+  </EntityType>
+  <EntityType Name="sporsalonu">
+    <Key>
+      <PropertyRef Name="s_id" />
+    </Key>
+    <Property Name="s_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="s_adi" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="s_sehir" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="l_id" Type="Int64" Nullable="false" />
+    <Property Name="ozellik" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="lig" Relationship="Self.FK_sporSalonu_1" FromRole="sporsalonu" ToRole="lig" />
+    <NavigationProperty Name="takim" Relationship="Self.FK_takim_2" FromRole="sporsalonu" ToRole="takim" />
+  </EntityType>
+  <EntityType Name="takim">
+    <Key>
+      <PropertyRef Name="t_id" />
+    </Key>
+    <Property Name="t_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="t_adi" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="l_id" Type="Int64" Nullable="false" />
+    <Property Name="s_id" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="lig" Relationship="Self.FK_takim_1" FromRole="takim" ToRole="lig" />
+    <NavigationProperty Name="sporsalonu" Relationship="Self.FK_takim_2" FromRole="takim" ToRole="sporsalonu" />
+  </EntityType>
+  <Association Name="FK_sporcu_1">
+    <End Role="lig" Type="Self.lig" Multiplicity="1" />
+    <End Role="sporcu" Type="Self.sporcu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lig">
+        <PropertyRef Name="l_id" />
+      </Principal>
+      <Dependent Role="sporcu">
+        <PropertyRef Name="l_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sporSalonu_1">
+    <End Role="lig" Type="Self.lig" Multiplicity="1" />
+    <End Role="sporsalonu" Type="Self.sporsalonu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lig">
+        <PropertyRef Name="l_id" />
+      </Principal>
+      <Dependent Role="sporsalonu">
+        <PropertyRef Name="l_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_takim_1">
+    <End Role="lig" Type="Self.lig" Multiplicity="1" />
+    <End Role="takim" Type="Self.takim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lig">
+        <PropertyRef Name="l_id" />
+      </Principal>
+      <Dependent Role="takim">
+        <PropertyRef Name="l_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_takim_2">
+    <End Role="sporsalonu" Type="Self.sporsalonu" Multiplicity="1" />
+    <End Role="takim" Type="Self.takim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sporsalonu">
+        <PropertyRef Name="s_id" />
+      </Principal>
+      <Dependent Role="takim">
+        <PropertyRef Name="s_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="sporEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="hakem" EntityType="Self.hakem" />
+    <EntitySet Name="lig" EntityType="Self.lig" />
+    <EntitySet Name="log" EntityType="Self.log" />
+    <EntitySet Name="musabaka" EntityType="Self.musabaka" />
+    <EntitySet Name="sporcu" EntityType="Self.sporcu" />
+    <EntitySet Name="sporsalonu" EntityType="Self.sporsalonu" />
+    <EntitySet Name="takim" EntityType="Self.takim" />
+    <AssociationSet Name="FK_sporcu_1" Association="Self.FK_sporcu_1">
+      <End Role="lig" EntitySet="lig" />
+      <End Role="sporcu" EntitySet="sporcu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sporSalonu_1" Association="Self.FK_sporSalonu_1">
+      <End Role="lig" EntitySet="lig" />
+      <End Role="sporsalonu" EntitySet="sporsalonu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_takim_1" Association="Self.FK_takim_1">
+      <End Role="lig" EntitySet="lig" />
+      <End Role="takim" EntitySet="takim" />
+    </AssociationSet>
+    <AssociationSet Name="FK_takim_2" Association="Self.FK_takim_2">
+      <End Role="sporsalonu" EntitySet="sporsalonu" />
+      <End Role="takim" EntitySet="takim" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

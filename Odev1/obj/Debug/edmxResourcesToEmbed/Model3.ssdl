@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tasarimodev1Model.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="hakem">
+    <Key>
+      <PropertyRef Name="hakem_id" />
+    </Key>
+    <Property Name="hakem_id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="hakem_adi" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="hakem_soyadi" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="hakem_turu" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="hakem_classman" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="hakem_bolge" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lig">
+    <Key>
+      <PropertyRef Name="l_id" />
+    </Key>
+    <Property Name="l_id" Type="uint" Nullable="false" />
+    <Property Name="l_adi" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ilgili" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="islem" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="tarih" Type="datetime" Precision="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sporcu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adi" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="soyadi" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="l_id" Type="uint" Nullable="false" />
+    <Property Name="ozellik" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sporsalonu">
+    <Key>
+      <PropertyRef Name="s_id" />
+    </Key>
+    <Property Name="s_id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="s_adi" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="s_sehir" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="l_id" Type="uint" Nullable="false" />
+    <Property Name="ozellik" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_sporcu_1">
+    <End Role="lig" Type="Self.lig" Multiplicity="1" />
+    <End Role="sporcu" Type="Self.sporcu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lig">
+        <PropertyRef Name="l_id" />
+      </Principal>
+      <Dependent Role="sporcu">
+        <PropertyRef Name="l_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sporSalonu_1">
+    <End Role="lig" Type="Self.lig" Multiplicity="1" />
+    <End Role="sporsalonu" Type="Self.sporsalonu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lig">
+        <PropertyRef Name="l_id" />
+      </Principal>
+      <Dependent Role="sporsalonu">
+        <PropertyRef Name="l_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="tasarimodev1ModelStoreContainer">
+    <EntitySet Name="hakem" EntityType="Self.hakem" Schema="tasarimodev1" store:Type="Tables" />
+    <EntitySet Name="lig" EntityType="Self.lig" Schema="tasarimodev1" store:Type="Tables" />
+    <EntitySet Name="log" EntityType="Self.log" Schema="tasarimodev1" store:Type="Tables" />
+    <EntitySet Name="sporcu" EntityType="Self.sporcu" Schema="tasarimodev1" store:Type="Tables" />
+    <EntitySet Name="sporsalonu" EntityType="Self.sporsalonu" Schema="tasarimodev1" store:Type="Tables" />
+    <AssociationSet Name="FK_sporcu_1" Association="Self.FK_sporcu_1">
+      <End Role="lig" EntitySet="lig" />
+      <End Role="sporcu" EntitySet="sporcu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sporSalonu_1" Association="Self.FK_sporSalonu_1">
+      <End Role="lig" EntitySet="lig" />
+      <End Role="sporsalonu" EntitySet="sporsalonu" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

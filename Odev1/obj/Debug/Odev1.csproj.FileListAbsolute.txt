@@ -1,0 +1,49 @@
+C:\Users\asus_nb\Desktop\Tasarım Desenleri\Odev1\Odev1\bin\Debug\Odev1.exe.config
+C:\Users\asus_nb\Desktop\Tasarım Desenleri\Odev1\Odev1\bin\Debug\Odev1.exe
+C:\Users\asus_nb\Desktop\Tasarım Desenleri\Odev1\Odev1\bin\Debug\Odev1.pdb
+C:\Users\asus_nb\Desktop\Tasarım Desenleri\Odev1\Odev1\obj\Debug\Odev1.csprojResolveAssemblyReference.cache
+C:\Users\asus_nb\Desktop\Tasarım Desenleri\Odev1\Odev1\obj\Debug\Odev1.Form1.resources
+C:\Users\asus_nb\Desktop\Tasarım Desenleri\Odev1\Odev1\obj\Debug\Odev1.Form2.resources
+C:\Users\asus_nb\Desktop\Tasarım Desenleri\Odev1\Odev1\obj\Debug\Odev1.Properties.Resources.resources
+C:\Users\asus_nb\Desktop\Tasarım Desenleri\Odev1\Odev1\obj\Debug\Odev1.csproj.GenerateResource.Cache
+C:\Users\asus_nb\Desktop\Tasarım Desenleri\Odev1\Odev1\obj\Debug\Odev1.exe
+C:\Users\asus_nb\Desktop\Tasarım Desenleri\Odev1\Odev1\obj\Debug\Odev1.pdb
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\Tasarım Desenleri\Eski\Odev1\Odev1\bin\Debug\Odev1.exe.config
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\Tasarım Desenleri\Eski\Odev1\Odev1\obj\Debug\Odev1.exe
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\Tasarım Desenleri\Eski\Odev1\Odev1\obj\Debug\Odev1.pdb
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\Tasarım Desenleri\Odev1\Odev1\obj\Debug\Odev1.csprojResolveAssemblyReference.cache
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\Tasarım Desenleri\Odev1\Odev1\obj\Debug\Odev1.Form1.resources
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\Tasarım Desenleri\Odev1\Odev1\obj\Debug\Odev1.Form2.resources
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\Tasarım Desenleri\Odev1\Odev1\obj\Debug\Odev1.Properties.Resources.resources
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\Tasarım Desenleri\Odev1\Odev1\obj\Debug\Odev1.csproj.GenerateResource.Cache
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\Tasarım Desenleri\Odev1\Odev1\bin\Debug\Odev1.exe.config
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\Tasarım Desenleri\Odev1\Odev1\bin\Debug\Odev1.exe
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\Tasarım Desenleri\Odev1\Odev1\bin\Debug\Odev1.pdb
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\Tasarım Desenleri\Odev1\Odev1\bin\Debug\EntityFramework.dll
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\Tasarım Desenleri\Odev1\Odev1\bin\Debug\EntityFramework.xml
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\Tasarım Desenleri\Odev1\Odev1\obj\Debug\Odev1.exe
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\Tasarım Desenleri\Odev1\Odev1\obj\Debug\Odev1.pdb
+C:\Users\Sam\Desktop\yedek\Odev1\Odev1\bin\Debug\Odev1.exe.config
+C:\Users\Sam\Desktop\yedek\Odev1\Odev1\obj\Debug\Odev1.exe
+C:\Users\Sam\Desktop\yedek\Odev1\Odev1\obj\Debug\Odev1.pdb
+C:\Users\Sam\Desktop\yedek\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\bin\Debug\Odev1.exe.config
+C:\Users\Sam\Desktop\yedek\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\obj\Debug\Odev1.exe
+C:\Users\Sam\Desktop\yedek\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\obj\Debug\Odev1.pdb
+D:\c#\tararimOdev1\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\bin\Debug\Odev1.exe.config
+D:\c#\tararimOdev1\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\obj\Debug\Odev1.exe
+D:\c#\tararimOdev1\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\obj\Debug\Odev1.pdb
+D:\c#\tararimOdev1\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\bin\Debug\Odev1.exe
+D:\c#\tararimOdev1\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\bin\Debug\Odev1.pdb
+D:\c#\tararimOdev1\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\bin\Debug\EntityFramework.dll
+D:\c#\tararimOdev1\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\bin\Debug\EntityFramework.xml
+D:\c#\tararimOdev1\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\obj\Debug\Odev1.csprojResolveAssemblyReference.cache
+D:\c#\tararimOdev1\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\obj\Debug\Odev1.Form1.resources
+D:\c#\tararimOdev1\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\obj\Debug\Odev1.Form2.resources
+D:\c#\tararimOdev1\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\obj\Debug\Odev1.Properties.Resources.resources
+D:\c#\tararimOdev1\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\obj\Debug\Odev1.csproj.GenerateResource.Cache
+D:\c#\tararimOdev1\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\obj\Debug\Odev1.Hakem.resources
+D:\c#\tararimOdev1\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\obj\Debug\Odev1.Form4.resources
+D:\c#\tararimOdev1\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\obj\Debug\Odev1.FiksturForm.resources
+D:\c#\tararimOdev1\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\obj\Debug\Odev1.FiksturFormm.resources
+D:\c#\tararimOdev1\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\obj\Debug\Odev1.FiksturFormTestcs.resources
+D:\c#\tararimOdev1\Ali Kaya Kılınç 201313172035 -- Samet Baskıcı 201313172018\Odev1\obj\Debug\Odev1.testtcs.resources

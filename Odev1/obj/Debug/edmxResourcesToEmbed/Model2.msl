@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="tasarimodev1ModelStoreContainer" CdmEntityContainer="sporEntites">
+    <EntitySetMapping Name="hakem">
+      <EntityTypeMapping TypeName="tasarimodev1Model.hakem">
+        <MappingFragment StoreEntitySet="hakem">
+          <ScalarProperty Name="hakem_id" ColumnName="hakem_id" />
+          <ScalarProperty Name="hakem_adi" ColumnName="hakem_adi" />
+          <ScalarProperty Name="hakem_soyadi" ColumnName="hakem_soyadi" />
+          <ScalarProperty Name="hakem_turu" ColumnName="hakem_turu" />
+          <ScalarProperty Name="hakem_classman" ColumnName="hakem_classman" />
+          <ScalarProperty Name="hakem_bolge" ColumnName="hakem_bolge" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lig">
+      <EntityTypeMapping TypeName="tasarimodev1Model.lig">
+        <MappingFragment StoreEntitySet="lig">
+          <ScalarProperty Name="l_id" ColumnName="l_id" />
+          <ScalarProperty Name="l_adi" ColumnName="l_adi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="log">
+      <EntityTypeMapping TypeName="tasarimodev1Model.log">
+        <MappingFragment StoreEntitySet="log">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ilgili" ColumnName="ilgili" />
+          <ScalarProperty Name="islem" ColumnName="islem" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sporcu">
+      <EntityTypeMapping TypeName="tasarimodev1Model.sporcu">
+        <MappingFragment StoreEntitySet="sporcu">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+          <ScalarProperty Name="soyadi" ColumnName="soyadi" />
+          <ScalarProperty Name="l_id" ColumnName="l_id" />
+          <ScalarProperty Name="ozellik" ColumnName="ozellik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sporsalonu">
+      <EntityTypeMapping TypeName="tasarimodev1Model.sporsalonu">
+        <MappingFragment StoreEntitySet="sporsalonu">
+          <ScalarProperty Name="s_id" ColumnName="s_id" />
+          <ScalarProperty Name="s_adi" ColumnName="s_adi" />
+          <ScalarProperty Name="s_sehir" ColumnName="s_sehir" />
+          <ScalarProperty Name="l_id" ColumnName="l_id" />
+          <ScalarProperty Name="ozellik" ColumnName="ozellik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

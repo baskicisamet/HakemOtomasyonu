@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Ogrenci bilgilerini içeriyor-->
+<components>
+  <textbox>
+    
+      <textcolor>#0A0AF8</textcolor>
+		<bgcolor>#B4FB00</bgcolor>
+  </textbox>
+</components>

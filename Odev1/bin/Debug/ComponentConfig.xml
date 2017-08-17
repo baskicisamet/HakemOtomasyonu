@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+ <components>
+
+	<textbox iscomponent="true" tip="birinci">
+		<textcolor>RED</textcolor>
+		<bgcolor>BLUE</bgcolor>
+	</textbox>
+	<button iscomponent="true" tip="birinci">
+		<textcolor>WHİTE</textcolor>
+		<bgcolor>GRAY</bgcolor>
+	</button>
+	<combobox iscomponent="true" tip="birinci">
+		<textcolor>YELLOW</textcolor>
+		<bgcolor>GREEN</bgcolor>
+	</combobox>
+ </components>
